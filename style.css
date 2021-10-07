@@ -199,7 +199,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.kihoon-box {
+.ilnam-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -208,7 +208,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.kihoon-bar {
+.ilnam-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +233,7 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.ilnam-box {
+.kihoon-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -242,7 +242,7 @@ body {
   width: 100%;
   background-color: rgba(27, 175, 234, 0.2);
 }
-.ilnam-bar {
+.kihoon-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -267,25 +267,7 @@ body {
   border-radius: 10px;
   background-color: rgba(251, 176, 59, 1);
 }
-
 .deoksu-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(251, 176, 59, 0.2);
-}
-.deoksu-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(251, 176, 59, 1);
-}
-/* .bear-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -294,7 +276,7 @@ body {
   width: 100%;
   background-color: rgba(195, 140, 102, 0.2);
 }
-.bear-bar {
+.deoksu-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,7 +284,7 @@ body {
   border-radius: 10px;
   background-color: rgba(195, 140, 102, 1);
 }
-.fox-box {
+/*.fox-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -357,10 +339,10 @@ body {
 .animal-explain {
     font-size: 1.5rem;
 }
-.kihoon-animal-title {
+.ilnam-animal-title {
     color: #3ba363;
 }
-.kihoon-animal-celeb {
+.ilnam-animal-celeb {
     color: #3ba363;
     font-size: 1.2rem;
 }
@@ -371,10 +353,10 @@ body {
     color: #3ba363;
     font-size: 1.2rem;
 }
-.ilnam-animal-title {
+.kihoon-animal-title {
     color: #ff6c0a;
 }
-.ilnam-animal-celeb {
+.kihoon-animal-celeb {
     color: #ff6c0a;
     font-size: 1.2rem;
 }
@@ -385,12 +367,11 @@ body {
     color: #548dd4;
     font-size: 1.2rem;
 }
-
 .deoksu-animal-title {
-    color: #B24021;
+    color: #548dd4;
 }
 .deoksu-animal-celeb {
-    color: #B24021;
+    color: #548dd4;
     font-size: 1.2rem;
 }
 /* 클래스가 더 많으면 넣으세요 */
