@@ -200,7 +200,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.ilnam-box {
+.lisa-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -209,7 +209,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.ilnam-bar {
+.lisa-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -217,7 +217,7 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.sangwoo-box {
+.jeny-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -226,7 +226,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.sangwoo-bar {
+.jeny-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -340,17 +340,17 @@ body {
 .animal-explain {
     font-size: 1.5rem;
 }
-.ilnam-animal-title {
+.lisa-animal-title {
     color: #3ba363;
 }
-.ilnam-animal-celeb {
+.lisa-animal-celeb {
     color: #3ba363;
     font-size: 1.2rem;
 }
-.sangwoo-animal-title {
+.jeny-animal-title {
     color: #3ba363;
 }
-.sangwoo-animal-celeb {
+.jeny-animal-celeb {
     color: #3ba363;
     font-size: 1.2rem;
 }

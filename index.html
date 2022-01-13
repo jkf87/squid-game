@@ -11,14 +11,14 @@
     <title>오징어게임 인물 닮은꼴 찾기</title>
     <meta name="title" content="오징어게임 인물 닮은꼴 찾기">
     <meta name="subject" content="나와 닮은 오징어게임 인물 맴버를 찾아보세요!">
-    <meta name="keywords" content="오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 기훈, 상우, 새벽, 일남, 덕수">
+    <meta name="keywords" content="오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 리사, 제니, 로제, 지수, 덕수">
     <meta name="author" content="코난쌤">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://squidgameai.netlify.app/" />
     <meta property="og:url" content="https://squidgameai.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="오징어게임 인물 닮은꼴" />
-    <meta property="og:description" content="오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 기훈, 상우, 새벽, 일남, 덕수"
+    <meta property="og:description" content="오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 리사, 제니, 로제, 지수, 덕수"
     />
     <meta property="og:image" content="./thumnail.png" />    
     <meta name="google-site-verification" content="PD9c4HJRQfHMMuxzKekUbCd8jdX6iIqEqsj2S9p3Cvc" />
@@ -26,7 +26,7 @@
 
 <body>
   <script type="text/javascript">
-        const URL= "https://teachablemachine.withgoogle.com/models/GfzyVLmRx/";
+        const URL= "https://teachablemachine.withgoogle.com/models/qMxFG3u4yq/";
         
         let model, labelContainer, maxPredictions;
         async function init() {
@@ -48,36 +48,36 @@
         
             var resultTitle, resultExplain, resultCeleb, resultpic;
                switch (prediction[0].className) {
-                    case "kihoon":
-                        resultTitle = "성기훈"
-                        resultExplain = "예, 저, 저는...저 쌍문동 사는 성기훈인데요..."
-                        resultCeleb = "NO.456"
-                        resultpic = "./kihoon.jpg"
+                    case "lisa":
+                        resultTitle = "리사"
+                        resultExplain = ""
+                        resultCeleb = "취미: 골프 "
+                        resultpic = "https://t1.daumcdn.net/cfile/tistory/9944A7345F86FD1028"
                         break;
-                    case "sangwoo":
-                        resultTitle = "조상우"
+                    case "jeny":
+                        resultTitle = "제니"
                         resultExplain = "어차피 우리가 저 돈 가지고 나가려면 다른 놈들 다 죽어야 돼. 형 손에 피 안 묻히게 해줬으면 오히려 고마워해야 되는 거 아니야?"
                         resultCeleb = "NO.218"
                         resultpic = "./sangwo.jpg"
                         break;
-                    case "ilnam":
-                        resultTitle = "오일남"
+                    case "jisu":
+                        resultTitle = "오지수"
                         resultExplain = "우리는 깐부잖아. 깐부끼리는 네 거 내 거가 없는 거야."
                         resultCeleb = "NO.001"
-                        resultpic = "./ilnam.jpg"
+                        resultpic = "./jisu.jpg"
                         break;
-                    case "saebyeog":
-                        resultTitle = "강새벽"
+                    case "rose":
+                        resultTitle = "로제"
                         resultExplain = "아저씨... 나 집에 가고 싶어..."
                         resultCeleb = "NO.067"
-                        resultpic = "./saebyeog.jpg"
+                        resultpic = "./rose.jpg"
                         break;
-                    case "deoksu":
-                        resultTitle = "장덕수"
-                        resultExplain = "헤이! 웰컴 투 코리아!"
-                        resultCeleb = "NO.101"
-                        resultpic = "./deoksu.jpg"
-                        break;    
+                    // case "deoksu":
+                    //     resultTitle = "장덕수"
+                    //     resultExplain = "헤이! 웰컴 투 코리아!"
+                    //     resultCeleb = "NO.101"
+                    //     resultpic = "./deoksu.jpg"
+                    //     break;    
                     default:
                         resultTitle = "알수없음"
                         resultExplain = ""
@@ -90,7 +90,7 @@
             var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             var pic = "<img src='" + resultpic +"'width='60%' heigt='auto'>"
             $('.result-message').html(pic + title + explain + celeb );
-            console.log(pic);
+            // console.log(model);
             var barWidth;
             
             for (let i = 0; i < maxPredictions; i++) {
@@ -103,21 +103,21 @@
                 }
                 var labelTitle;
                 switch (prediction[i].className) {
-                    case "kihoon":
-                        labelTitle = "기훈(kihoon)"
+                    case "lisa":
+                        labelTitle = "리사(lisa)"
                         break;
-                    case "sangwoo":
-                        labelTitle = "상우(sangwoo)"
+                    case "jeny":
+                        labelTitle = "제니(jeny)"
                         break;
-                    case "ilnam":
-                        labelTitle = "일남(ilnam)"
+                    case "jisu":
+                        labelTitle = "지수(jisu)"
                         break;
-                    case "saebyeog":
-                        labelTitle = "새벽(saebyeog)"
+                    case "rose":
+                        labelTitle = "로제(rose)"
                         break;
-                    case "deoksu":
-                        labelTitle = "덕수(deoksu)"
-                        break;    
+                    // case "deoksu":
+                    //     labelTitle = "덕수(deoksu)"
+                    //     break;    
                     default:
                         labelTitle = "알수없음"
                 }
@@ -154,7 +154,7 @@
         <h2 class="sr-only">나와 닮은 오징어게임 인물 맴버를 찾아보세요!</h2>
         <h3 class="sr-only">대표 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴과 비슷한 오징어게임 인물 멤버를 찾아드립니다.</h3>
         <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
-        <p class="sr-only">오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 기훈, 상우, 새벽, 일남, 덕수</p>
+        <p class="sr-only">오징어게임 인물 닮은꼴 찾기, 인공지능 오징어게임 인물 닮은꼴 찾기, 나와 닮은 연예인, squid game, 얼굴 평가, 오징어게임, 리사, 제니, 로제, 지수, 덕수</p>
     </section>
     <div class="ad-banner"><ins class="kakao_ad_area" style="display:none;" 
  data-ad-unit    = "DAN-FM2x16oUknJWkGi1" 
