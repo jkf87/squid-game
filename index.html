@@ -44,37 +44,42 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
         
-            var resultTitle, resultExplain, resultCeleb, resultpic;
+            var resultTitle, resultExplain, resultCeleb, resultpic, resulturl;
                switch (prediction[0].className) {
                     case "kihoon":
                         resultTitle = "성기훈"
                         resultExplain = "예, 저, 저는...저 쌍문동 사는 성기훈인데요..."
                         resultCeleb = "NO.456"
                         resultpic = "./kihoon.jpg"
+                        resulturl = "https://www.hankyung.com/society/article/2021093051927"
                         break;
                     case "sangwoo":
                         resultTitle = "조상우"
-                        resultExplain = "어차피 우리가 저 돈 가지고 나가려면 다른 놈들 다 죽어야 돼. 형 손에 피 안 묻히게 해줬으면 오히려 고마워해야 되는 거 아니야?"
+                        resultExplain = "어차피  우리가 저 돈 가지고 나가려면 다른 놈들 다 죽어야 돼. 형 손에 피 안 묻히게 해줬으면 오히려 고마워해야 되는 거 아니야?"
                         resultCeleb = "NO.218"
                         resultpic = "./sangwo.jpg"
+                        resulturl = ""
                         break;
                     case "ilnam":
                         resultTitle = "오일남"
                         resultExplain = "우리는 깐부잖아. 깐부끼리는 네 거 내 거가 없는 거야."
                         resultCeleb = "NO.001"
                         resultpic = "./ilnam.jpg"
+                        resulturl = ""
                         break;
                     case "saebyeog":
                         resultTitle = "강새벽"
                         resultExplain = "아저씨... 나 집에 가고 싶어..."
                         resultCeleb = "NO.067"
                         resultpic = "./saebyeog.jpg"
+                        resulturl = "https://tenasia.hankyung.com/tv-drama/article/2021102019424"
                         break;
                     case "deoksu":
                         resultTitle = "장덕수"
                         resultExplain = "헤이! 웰컴 투 코리아!"
                         resultCeleb = "NO.101"
                         resultpic = "./deoksu.jpg"
+                        resulturl = ""
                         break;    
                     default:
                         resultTitle = "알수없음"
@@ -87,8 +92,9 @@
             var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
             var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             var pic = "<img src='" + resultpic +"'width='60%' heigt='auto'>"
-            $('.result-message').html(pic + title + explain + celeb );
-            console.log(pic);
+            // var url = "<iframe src='" +resulturl +"'></iframe>"
+            $('.result-message').html(pic + title + explain + celeb);
+            console.log(prediction);
             var barWidth;
             
             for (let i = 0; i < maxPredictions; i++) {

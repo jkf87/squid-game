@@ -479,3 +479,6 @@ input:checked + label > .knob > i:before {
     width: 320px;
     margin: 0 auto;
 }
+.url{
+  transform-origin: 0.5;
+}
